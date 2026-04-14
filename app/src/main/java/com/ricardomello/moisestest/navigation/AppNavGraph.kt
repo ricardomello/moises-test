@@ -4,6 +4,7 @@ import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -44,6 +45,7 @@ fun AppNavGraph(navController: NavHostController) {
             startDestination = Screen.Home.route,
             modifier = Modifier
                 .fillMaxSize()
+                .navigationBarsPadding()
                 .padding(bottom = if (showMiniPlayer) miniPlayerHeight else 0.dp),
         ) {
             composable(
